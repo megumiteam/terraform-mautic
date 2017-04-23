@@ -1,0 +1,7 @@
+cidr = "172.31.0.0/16"
+site_name  = "mautictest"
+stage = "development"
+domain = "example.com"
+allow_ip = "0.0.0.0/0"
+key_name = "YOUR_SSH_KEY_NAME"
+instance_size="t2.medium"
