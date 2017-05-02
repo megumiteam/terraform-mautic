@@ -3,6 +3,7 @@ provider "aws" {}
 variable "site_name" {}
 variable "key_name" {}
 variable "domain" {}
+variable "email" {}
 variable "stage" {}
 variable "cidr" {}
 variable "instance_size" { default = "t2.medium" }
@@ -37,4 +38,9 @@ output "ip" {
 }
 output "instance_id" {
   value = "${aws_instance.mautic.id}"
+}
+
+provider "aws" {
+    alias = "oregon"
+    region = "us-west-2"
 }

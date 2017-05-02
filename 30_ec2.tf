@@ -6,9 +6,11 @@ resource "aws_instance" "mautic" {
     key_name                    = "${var.key_name}"
     subnet_id                   = "${aws_subnet.subnet.id}"
     vpc_security_group_ids      = ["${aws_security_group.ec2.id}"]
+    iam_instance_profile        = "${aws_iam_instance_profile.instance_role.id}"
     associate_public_ip_address = true
     monitoring                  = true
     source_dest_check           = true
+    disable_api_termination     = false
     user_data = <<EOF
 IyEvYmluL2Jhc2gKIyBmb3IgdXNlcmRhdGEKc3VkbyBzZXJ2aWNlIGh0dHBkIHJl
 c3RhcnQKZXhpdCAwCg==
