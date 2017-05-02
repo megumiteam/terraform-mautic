@@ -12,8 +12,10 @@ resource "aws_instance" "mautic" {
     source_dest_check           = true
     disable_api_termination     = false
     user_data = <<EOF
-IyEvYmluL2Jhc2gKIyBmb3IgdXNlcmRhdGEKc3VkbyBzZXJ2aWNlIGh0dHBkIHJl
-c3RhcnQKZXhpdCAwCg==
+IyEvYmluL2Jhc2gKIyBmb3IgdXNlcmRhdGEKY2QgL3RtcApzdWRvIHl1bSBpbnN0
+YWxsIC15IGh0dHBzOi8vczMuYW1hem9uYXdzLmNvbS9lYzItZG93bmxvYWRzLXdp
+bmRvd3MvU1NNQWdlbnQvbGF0ZXN0L2xpbnV4X2FtZDY0L2FtYXpvbi1zc20tYWdl
+bnQucnBtCgpzdWRvIHNlcnZpY2UgaHR0cGQgcmVzdGFydApleGl0IDAK
 EOF
     root_block_device {
         volume_type           = "gp2"
