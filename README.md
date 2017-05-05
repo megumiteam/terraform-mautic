@@ -32,7 +32,16 @@ site_name  = "mautictest"
 stage = "development"
 domain = "example.com"
 allow_ip = "0.0.0.0/0"
-key_name = "YOUR_SSH_KEY_NAME"
+instance_size="t2.medium"
+email = "example.com"
+```
+
+### Create resources with New EC2 Keypair
+Run `vim terraform.tfvars` and remove `key_name = "YOUR_SSH_KEY_NAME"`.
+After that, you can create resource by following command.
+
+```
+$ /bin/bash ./bin/create_new.sh YOUR_SSH_KEY_NAME
 ```
 
 ### Check Resource Updates

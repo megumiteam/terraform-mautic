@@ -3,6 +3,8 @@ site_name  = "mautictest"
 stage = "development"
 domain = "example.com"
 allow_ip = "0.0.0.0/0"
-key_name = "YOUR_SSH_KEY_NAME"
 instance_size="t2.medium"
 email = "example.com"
+
+# If you run ./bin/create_new.sh, please remove this.
+key_name = "YOUR_SSH_KEY_NAME"
