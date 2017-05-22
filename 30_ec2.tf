@@ -10,7 +10,7 @@ resource "aws_instance" "mautic" {
     associate_public_ip_address = true
     monitoring                  = true
     source_dest_check           = true
-    disable_api_termination     = false
+    disable_api_termination     = true
     user_data = <<EOF
 IyEvYmluL2Jhc2gKIyBmb3IgdXNlcmRhdGEKY2QgL3RtcApzdWRvIHl1bSBpbnN0
 YWxsIC15IGh0dHBzOi8vczMuYW1hem9uYXdzLmNvbS9lYzItZG93bmxvYWRzLXdp
